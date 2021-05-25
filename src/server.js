@@ -20,7 +20,19 @@ PornBot.on('message', async (msg) => {
         picPorn = await commands.asianPicPorn()
 
         PornBot.sendPhoto(userId, picPorn)
+    } else if (userMessage === '/ass') {
+        picPorn = await commands.assPicPorn()
+        PornBot.sendPhoto(userId, picPorn)
+
+    } else if (userMessage === '/hairypussy') {
+        picPorn = await commands.hairyPussyPicPorn()
+        PornBot.sendPhoto(userId, picPorn)
+    } else if (userMessage === '/trap') {
+        picPorn = await commands.trapsPicPorn()
+        PornBot.sendPhoto(userId, picPorn)
     }
+
+
 
 
 

@@ -11,43 +11,98 @@ const r = new snoowrap({
 });
 
 
+//task for another day: add getHot,getNew and getRising
+
 const asianPicPorn = async () => {
-    console.log("hi");
-    let dataPost = [];
-    const dataImages = []
 
-    const subreddit = await r.getSubreddit('AsiansGoneWild').getTop({ time: 'week', limit: 50 }).then(data => {
-        data.forEach((post) => {
-            dataPost.push({
-                link: post.url,
+    // let dataPost = [];
+    // const dataImages = []
+    const subReddits = ['AsiansGoneWild', 'juicyasians', 'AsianPorn', 'AsianHotties', 'NSFW_Japan']
 
-            })
-        });
-        dataPost.forEach((post) => {
-            if (post.link.includes('png') || post.link.includes('jpg')) {
-                dataImages.push({
-                    link: post.link
-                })
-            }
-        })
+    const randomReddit = subReddits[helpers.generateRandomNumber(subReddits.length - 1)]
+
+
+    // Call redditApi en collect the imgs
+    const dataImages = await r.getSubreddit(randomReddit).getTop({ time: 'week', limit: 40 }).then(data => {
+        return helpers.getDataPic(data)
+        // console.log(data);
+    }).catch(err => {
+        return console.log(err);
     })
 
 
 
+    console.log(randomReddit);
+    console.log(dataImages);
 
 
 
 
-    console.log(dataImages.length - 1);
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1)
 
-    const numberImages = helpers.generateRandomNumber(dataImages.length - 1)
-
-
-    return dataImages[numberImages].link
+    //Select a random img from array
+    return dataImages[randomNumber].link
 
 }
 
+const assPicPorn = async () => {
+
+    const subReddits = ['ass', 'CuteLittleButts', 'bigasses', 'booty', 'pawg', 'cosplaybutts']
+
+
+    const randomReddit = subReddits[helpers.generateRandomNumber(subReddits.length - 1)]
+
+    console.log(randomReddit);
+    const dataImages = await r.getSubreddit(randomReddit).getTop({ time: 'week', limit: 40 }).then(data => {
+        return helpers.getDataPic(data)
+    })
+
+
+    console.log(dataImages.length);
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1)
+
+    //Select a random img from array
+    return dataImages[randomNumber].link
+}
+
+
+
+const hairyPussyPicPorn = async () => {
+
+    const subReddits = ['HairyPussy', 'RugsOnly', 'FireCrotch', 'landingstrip',]
+
+    const randomReddit = subReddits[helpers.generateRandomNumber(subReddits.length - 1)]
+    const dataImages = await r.getSubreddit(randomReddit).getTop({ time: 'week', limit: 40 }).then(data => {
+        return helpers.getDataPic(data)
+    })
+
+    console.log(randomReddit);
+    console.log(dataImages);
+
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1)
+
+    //Select a random img from array
+    return dataImages[randomNumber].link
+}
+
+const trapsPicPorn = async () => {
+
+    const subReddits = ['traps', 'Sissies', 'femboy', 'FemBoys', 'Tgirls']
+    const randomReddit = subReddits[helpers.generateRandomNumber(subReddits.length - 1)]
+    const dataImages = await r.getSubreddit(randomReddit).getTop({ time: 'week', limit: 50 }).then(data => {
+
+        return helpers.getDataPic(data)
+    })
+
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1)
+
+
+    return dataImages[randomNumber].link
+}
 
 module.exports = {
-    asianPicPorn
+    asianPicPorn,
+    assPicPorn,
+    hairyPussyPicPorn,
+    trapsPicPorn
 }
