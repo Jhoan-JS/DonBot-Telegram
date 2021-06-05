@@ -31,11 +31,21 @@ PornBot.on("message", async (msg) => {
   } else if (userMessage === "/ass") {
     picPorn = await commands.assPicPorn();
     PornBot.sendPhoto(userId, picPorn);
+  } else if (userMessage === "/anal") {
+    picPorn = await commands.analPicPorn();
+    PornBot.sendPhoto(userId, picPorn);
   } else if (userMessage === "/hairypussy") {
     picPorn = await commands.hairyPussyPicPorn();
     PornBot.sendPhoto(userId, picPorn);
   } else if (userMessage === "/trap") {
     picPorn = await commands.trapsPicPorn();
+    PornBot.sendPhoto(userId, picPorn);
+  } else if (userMessage === "/amateur") {
+    picPorn = await commands.amateurPicPorn();
+    PornBot.sendPhoto(userId, picPorn);
+  } else if (userMessage === "/college") {
+    picPorn = await commands.collegePicPorn();
+    console.log(picPorn);
     PornBot.sendPhoto(userId, picPorn);
   } else if (userMessage === "/trapgif") {
     picPorn = await commands.trapsGifPorn();
@@ -47,6 +57,18 @@ PornBot.on("message", async (msg) => {
     PornBot.sendDocument(userId, picPorn);
   } else if (userMessage === "/asiangif") {
     picPorn = await commands.asianGifPorn();
+    console.log(picPorn);
+    PornBot.sendDocument(userId, picPorn);
+  } else if (userMessage === "/amateurgif") {
+    picPorn = await commands.ameteurGifPorn();
+    console.log(picPorn);
+    PornBot.sendDocument(userId, picPorn);
+  } else if (userMessage === "/collegegif") {
+    picPorn = await commands.collegeGifPorn();
+    console.log(picPorn);
+    PornBot.sendDocument(userId, picPorn);
+  } else if (userMessage === "/analgif") {
+    picPorn = await commands.analGifPorn();
     console.log(picPorn);
     PornBot.sendDocument(userId, picPorn);
   }

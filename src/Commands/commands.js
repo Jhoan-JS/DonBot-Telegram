@@ -3,6 +3,7 @@ const helpers = require(path.join(__dirname, "../helpers/help.js"));
 
 //task for another day: add getHot,getNew and getRising
 const snoowrap = require("snoowrap");
+const { generateRandomNumber } = require("../helpers/help");
 const r = new snoowrap({
   userAgent: "DonBot",
   clientId: "6iRNBv1tqxrCZA",
@@ -101,6 +102,48 @@ const assGifPorn = async () => {
   return dataImages[randomNumber].link;
 };
 
+const analPicPorn = async () => {
+  const subReddits = [
+    "anal",
+    "AnalGW",
+    "distension",
+    "MasterOfAnal",
+    "painal",
+    "anal_gifs",
+    "buttsthatgrip"
+  ];
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+  const dataImages = await sort(randomReddit, "pic");
+
+  console.log(dataImages.length);
+  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+  return dataImages[randomNumber].link;
+};
+
+const analGifPorn = async () => {
+  const subReddits = [
+    "anal",
+    "AnalGW",
+    "distension",
+    "MasterOfAnal",
+    "painal",
+    "anal_gifs",
+    "buttsthatgrip"
+  ];
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+  const dataImages = await sort(randomReddit, "gif");
+
+  console.log(dataImages.length);
+  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+  return dataImages[randomNumber].link;
+};
+
 const hairyPussyPicPorn = async () => {
   const subReddits = ["HairyPussy", "RugsOnly", "FireCrotch", "landingstrip"];
 
@@ -115,6 +158,106 @@ const hairyPussyPicPorn = async () => {
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
   //Select a random img from array
+  return dataImages[randomNumber].link;
+};
+
+const amateurPicPorn = async () => {
+  const subReddits = [
+    "RealGirls",
+    "Amateur",
+    "amateurcumsluts",
+    "AmateurPorn",
+    "realasians",
+    "FunWithFriends"
+  ];
+
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+
+  const dataImages = await sort(randomReddit, "pic");
+
+  console.log(sort);
+  console.log(dataImages);
+  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+
+  return dataImages[randomNumber].link;
+};
+
+const ameteurGifPorn = async () => {
+  const subReddits = [
+    "RealGirls",
+    "Amateur",
+    "amateurcumsluts",
+    "AmateurPorn",
+    "realasians",
+    "FunWithFriends"
+  ];
+
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+
+  const dataImages = await sort(randomReddit, "gif");
+  console.log(sort);
+  console.log(dataImages);
+  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+
+  return dataImages[randomNumber].link;
+};
+
+//College
+
+const collegePicPorn = async () => {
+  console.log("aaa");
+  const subReddits = [
+    "collegesluts",
+    "CollegeAmateurs",
+    "CollegeInitiation",
+    "bestofcollege",
+    "LegalCollegeGirls",
+    "fuckyeahcollegesluts"
+  ];
+
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+
+  const dataImages = await sort(randomReddit, "pic");
+
+  console.log(dataImages);
+  console.log(dataImages.length);
+
+  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+
+  return dataImages[randomNumber].link;
+};
+
+const collegeGifPorn = async () => {
+  const subReddits = [
+    "collegesluts",
+    "CollegeAmateurs",
+    "CollegeInitiation",
+    "bestofcollege",
+    "LegalCollegeGirls",
+    "fuckyeahcollegesluts"
+  ];
+
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+
+  const dataImages = await sort(randomReddit, "gif");
+
+  console.log(dataImages);
+  console.log(dataImages.length);
+
+  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+
   return dataImages[randomNumber].link;
 };
 
@@ -154,10 +297,16 @@ const trapsGifPorn = async () => {
 
 module.exports = {
   asianPicPorn,
+  asianGifPorn,
   assPicPorn,
+  assGifPorn,
+  analPicPorn,
+  analGifPorn,
+  amateurPicPorn,
+  ameteurGifPorn,
+  collegePicPorn,
+  collegeGifPorn,
   hairyPussyPicPorn,
   trapsPicPorn,
-  trapsGifPorn,
-  assGifPorn,
-  asianGifPorn
+  trapsGifPorn
 };
