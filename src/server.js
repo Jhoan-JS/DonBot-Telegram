@@ -1,5 +1,6 @@
 require("dotenv").config({ path: "../.env" });
 process.env.NTBA_FIX_319;
+process.env.NTBA_FIX_350;
 const TelegramBot = require("node-telegram-bot-api");
 const PornBot = new TelegramBot(process.env.TOKEN, { polling: true });
 const path = require("path");
@@ -16,17 +17,17 @@ const r = new snoowrap({
 //Requires
 
 const commands = require(path.join(__dirname, "Commands/commands.js"));
-
+const commandsPornHub = require(path.join(
+  __dirname,
+  "Commands/commandsPHub.js"
+));
 PornBot.on("message", async (msg) => {
   const userMessage = msg.text.toString().toLowerCase();
   const userId = msg.chat.id;
   // PornBot.sendMessage(userId, "Hello dear user");
 
-  console.log("sd");
-
   if (userMessage === "/asian") {
     picPorn = await commands.asianPicPorn();
-
     PornBot.sendPhoto(userId, picPorn);
   } else if (userMessage === "/ass") {
     picPorn = await commands.assPicPorn();
@@ -71,6 +72,10 @@ PornBot.on("message", async (msg) => {
     picPorn = await commands.analGifPorn();
     console.log(picPorn);
     PornBot.sendDocument(userId, picPorn);
+  } else if (userMessage === "/asianvideo") {
+    picPorn = await commandsPornHub.getPornHubVideo();
+    console.log(picPorn);
+    PornBot.sendMessage(userId, picPorn);
   }
 });
 
