@@ -295,7 +295,22 @@ const trapsPicPorn = async () => {
 };
 
 const trapsGifPorn = async () => {
-  const subReddits = ["traps", "Sissies", "FemBoys"];
+  const subReddits = [
+    "traps",
+    "Sissies",
+    "femboy",
+    "FemBoys",
+    "Tgirls",
+    "GoneWildCD",
+    "sissyhypno",
+    "Sissyperfection",
+    "sissykik",
+    "Sissygasms",
+    "SissyInspiration",
+
+    "CagedAndFucked",
+    "bitchsissies"
+  ];
 
   const randomReddit =
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
