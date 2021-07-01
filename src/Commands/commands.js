@@ -1,9 +1,9 @@
 const path = require("path");
-const helpers = require(path.join(__dirname, "../helpers/help.js"));
+const helpers = require("../helpers/help");
 
 //task for another day: add getHot,getNew and getRising
 const snoowrap = require("snoowrap");
-const { generateRandomNumber } = require("../helpers/help");
+
 const r = new snoowrap({
   userAgent: "DonBot",
   clientId: "6iRNBv1tqxrCZA",
@@ -72,9 +72,8 @@ const assPicPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  console.log(sort);
   const dataImages = await sort(randomReddit, "pic");
-  console.log(dataImages.length);
+
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
   //Select a random img from array
@@ -97,7 +96,6 @@ const assGifPorn = async () => {
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
   const dataImages = await sort(randomReddit, "gif");
 
-  console.log(dataImages.length);
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
   return dataImages[randomNumber].link;
 };
@@ -118,7 +116,6 @@ const analPicPorn = async () => {
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
   const dataImages = await sort(randomReddit, "pic");
 
-  console.log(dataImages.length);
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
   return dataImages[randomNumber].link;
 };
@@ -139,7 +136,6 @@ const analGifPorn = async () => {
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
   const dataImages = await sort(randomReddit, "gif");
 
-  console.log(dataImages.length);
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
   return dataImages[randomNumber].link;
 };
@@ -152,9 +148,8 @@ const hairyPussyPicPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  console.log(sort);
   const dataImages = await sort(randomReddit, "pic");
-  console.log(dataImages.length);
+
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
   //Select a random img from array
@@ -178,8 +173,6 @@ const amateurPicPorn = async () => {
 
   const dataImages = await sort(randomReddit, "pic");
 
-  console.log(sort);
-  console.log(dataImages);
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
   return dataImages[randomNumber].link;
@@ -201,8 +194,7 @@ const ameteurGifPorn = async () => {
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
   const dataImages = await sort(randomReddit, "gif");
-  console.log(sort);
-  console.log(dataImages);
+
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
   return dataImages[randomNumber].link;
@@ -211,7 +203,6 @@ const ameteurGifPorn = async () => {
 //College
 
 const collegePicPorn = async () => {
-  console.log("aaa");
   const subReddits = [
     "collegesluts",
     "CollegeAmateurs",
@@ -227,9 +218,6 @@ const collegePicPorn = async () => {
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
   const dataImages = await sort(randomReddit, "pic");
-
-  console.log(dataImages);
-  console.log(dataImages.length);
 
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
@@ -252,9 +240,6 @@ const collegeGifPorn = async () => {
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
   const dataImages = await sort(randomReddit, "gif");
-
-  console.log(dataImages);
-  console.log(dataImages.length);
 
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
@@ -286,9 +271,8 @@ const trapsPicPorn = async () => {
 
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  console.log(sort);
   const dataImages = await sort(randomReddit, "pic");
-  console.log(dataImages.length);
+
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
   return dataImages[randomNumber].link;
@@ -298,14 +282,13 @@ const trapsGifPorn = async () => {
   const subReddits = [
     "traps",
     "Sissies",
-    "femboy",
+
     "FemBoys",
     "Tgirls",
     "GoneWildCD",
     "sissyhypno",
     "Sissyperfection",
-    "sissykik",
-    "Sissygasms",
+
     "SissyInspiration",
 
     "CagedAndFucked",
@@ -318,7 +301,6 @@ const trapsGifPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  console.log(sort);
   const dataImages = await sort(randomReddit, "gif");
 
   const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);

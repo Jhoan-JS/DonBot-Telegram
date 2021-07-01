@@ -10,11 +10,10 @@
   "author": "Dev-GG",
   "license": "ISC",
   "dependencies": {
-    "@justalk/pornhub-api": "^3.5.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "node-telegram-bot-api": "^0.53.0",
     "pornhub.js": "^0.2.4",
-    "snoowrap": "^1.23.0"
+    "snoowrap": "^1.23.0",
+    "telegraf": "^4.3.0"
   }
 }

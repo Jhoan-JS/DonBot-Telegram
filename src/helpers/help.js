@@ -1,5 +1,5 @@
 const path = require("path");
-
+const commands = require("../Commands/commands");
 const snoowrap = require("snoowrap");
 
 const r = new snoowrap({
@@ -120,6 +120,20 @@ const getHot = async (randomReddit, type) => {
       return e;
     });
 };
+
+//List of commands of fuctions
+
+// const getFuctionPic = (command) => {
+//   const listFuctionsPic = { asian: function( asianPicPorn };
+//   let FuctionPic = "";
+//   // for (const fuction in listFuctionsPic) {
+//   //   if (command === fuction) {
+//   //     return (FuctionPic = listFuctionsPic[fuction]);
+//   //   }
+//   // }
+
+//   return listFuctionsPic.asian;
+// };
 
 module.exports = {
   generateRandomNumber,
