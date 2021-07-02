@@ -24,10 +24,12 @@ const getDataPic = (data) => {
 };
 const getDataGif = async (data) => {
   const images = [];
+
   data.forEach((img) => {
     if (img.url.includes(".gif") || img.url.includes(".mp4")) {
+      //Replace gifv to mp4
       img.url = img.url.replace(".gifv", ".mp4");
-      console.log(img.url);
+
       images.push({
         link: img.url,
         score: img.score
@@ -60,12 +62,11 @@ const generateRandomNumber = (number) => {
 };
 
 const getNew = async (randomReddit, type) => {
-  console.log(type);
   return await r
     .getSubreddit(randomReddit)
     .getNew({
       time: "all",
-      limit: 400,
+      limit: 600,
       search: "gif"
     })
     .then((data) => {
@@ -80,7 +81,6 @@ const getNew = async (randomReddit, type) => {
     });
 };
 const getTop = async (randomReddit, type) => {
-  console.log(type);
   return await r
     .getSubreddit(randomReddit)
     .getTop({
@@ -101,7 +101,6 @@ const getTop = async (randomReddit, type) => {
 };
 
 const getHot = async (randomReddit, type) => {
-  console.log(type);
   return await r
     .getSubreddit(randomReddit)
     .getHot({

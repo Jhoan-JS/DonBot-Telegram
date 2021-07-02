@@ -301,11 +301,13 @@ const trapsGifPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  const dataImages = await sort(randomReddit, "gif");
+  try {
+    const dataImages = await sort(randomReddit, "gif");
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  return dataImages[randomNumber].link;
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 module.exports = {

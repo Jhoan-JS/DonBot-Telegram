@@ -5,7 +5,9 @@ const listOfFuctions = require("./helpers/list");
 
 //Initializations
 
-const PornBot = new Telegraf(process.env.TOKEN);
+const PornBot = new Telegraf(
+  process.env.TOKEN || "1824240665:AAE3nBCRBDmHfgDJl0S74L3RXzN58s3iKqg"
+);
 
 //Commands
 PornBot.help((ctx) => {
@@ -47,10 +49,6 @@ PornBot.command(
     ctx.replyWithVideo(picPorn);
   }
 );
-PornBot.hears("text", (ctx) => {
-  console.log("hi");
-  ctx.reply("number");
-});
 
 PornBot.launch();
 // Enable graceful stop
