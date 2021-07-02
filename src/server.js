@@ -5,9 +5,7 @@ const listOfFuctions = require("./helpers/list");
 
 //Initializations
 
-const PornBot = new Telegraf(
-  process.env.TOKEN || "1824240665:AAE3nBCRBDmHfgDJl0S74L3RXzN58s3iKqg"
-);
+const PornBot = new Telegraf(process.env.TOKEN);
 
 //Commands
 PornBot.help((ctx) => {
