@@ -156,6 +156,22 @@ const hairyPussyPicPorn = async () => {
   return dataImages[randomNumber].link;
 };
 
+const hairyPussyGifPorn = async () => {
+  const subReddits = ["HairyPussy", "RugsOnly", "FireCrotch", "landingstrip"];
+
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+
+  const dataImages = await sort(randomReddit, "gif");
+
+  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+
+  //Select a random img from array
+  return dataImages[randomNumber].link;
+};
+
 const amateurPicPorn = async () => {
   const subReddits = [
     "RealGirls",
@@ -178,7 +194,7 @@ const amateurPicPorn = async () => {
   return dataImages[randomNumber].link;
 };
 
-const ameteurGifPorn = async () => {
+const amateurGifPorn = async () => {
   const subReddits = [
     "RealGirls",
     "Amateur",
@@ -318,10 +334,11 @@ module.exports = {
   analPicPorn,
   analGifPorn,
   amateurPicPorn,
-  ameteurGifPorn,
+  amateurGifPorn,
   collegePicPorn,
   collegeGifPorn,
   hairyPussyPicPorn,
+  hairyPussyGifPorn,
   trapsPicPorn,
   trapsGifPorn
 };

@@ -22,10 +22,11 @@ const getFuctionPic = (userCommand) => {
 
 const getFuctionGif = (userCommand) => {
   const listFuctionsPic = {
+    amateurgif: commands.amateurGifPorn,
     asiangif: commands.asianGifPorn,
     assgif: commands.assGifPorn,
     analgif: commands.analGifPorn,
-    amateurgif: commands.amateurGifPorn,
+
     hairypussygif: commands.hairyPussyGifPorn,
     collegegif: commands.collegeGifPorn,
     trapgif: commands.trapsGifPorn
