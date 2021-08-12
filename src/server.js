@@ -20,9 +20,15 @@ PornBot.command(
       ctx.message.text.replace("/", "")
     );
 
-    const picPorn = await getPic();
+    try {
+      const picPorn = await getPic();
 
-    ctx.replyWithPhoto(picPorn);
+      ctx.replyWithPhoto(picPorn);
+    } catch (error) {
+      const picPorn = await getPic();
+
+      ctx.replyWithPhoto(picPorn);
+    }
   }
 );
 
@@ -42,9 +48,15 @@ PornBot.command(
       ctx.message.text.replace("/", "")
     );
 
-    const picPorn = await getPic();
+    try {
+      const picPorn = await getPic();
 
-    ctx.replyWithVideo(picPorn);
+      ctx.replyWithVideo(picPorn);
+    } catch (error) {
+      const picPorn = await getPic();
+
+      ctx.replyWithVideo(picPorn);
+    }
   }
 );
 
