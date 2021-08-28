@@ -1,5 +1,5 @@
 const path = require("path");
-const commands = require("../Commands/commands");
+const commands = require("../Commands/picController");
 const snoowrap = require("snoowrap");
 
 const r = new snoowrap({
@@ -15,6 +15,7 @@ const getDataPic = (data) => {
     if (img.url.includes("png") || img.url.includes("jpg")) {
       images.push({
         link: img.url,
+
         score: img.score
       });
     }
@@ -41,21 +42,21 @@ const getDataGif = async (data) => {
   return images;
 };
 
-const getDataVideo = (data) => {
-  const videos = [];
+// const getDataVideo = (data) => {
+//   const videos = [];
 
-  data.forEach((video) => {
-    videos.push({
-      titlel: video.title,
-      url: video.url,
-      previewl: video.preview,
-      mime_type: "video/mp4"
-    });
-    // console.log(video);
-  });
+//   data.forEach((video) => {
+//     videos.push({
+//       titlel: video.title,
+//       url: video.url,
+//       previewl: video.preview,
+//       mime_type: "video/mp4"
+//     });
+//     // console.log(video);
+//   });
 
-  return videos;
-};
+//   return videos;
+// };
 
 const generateRandomNumber = (number) => {
   return Math.ceil(Math.random() * number);
@@ -138,7 +139,7 @@ module.exports = {
   generateRandomNumber,
   getDataPic,
   getDataGif,
-  getDataVideo,
+
   getNew,
   getTop,
   getHot

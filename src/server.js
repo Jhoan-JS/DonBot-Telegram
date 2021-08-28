@@ -1,10 +1,10 @@
-require("dotenv").config({ path: __dirname + "/.env" });
+require("dotenv").config({ paht: "./.env" });
 
 const { Telegraf } = require("telegraf");
 const listOfFuctions = require("./helpers/list");
 
 //Initializations
-
+console.log(process.env.TOKEN);
 const PornBot = new Telegraf(process.env.TOKEN);
 
 //Commands
@@ -21,7 +21,7 @@ PornBot.command(
     );
 
     try {
-      const picPorn = await getPic();
+      const picPorn = await getPic(ctx.message.text.replace("/", ""));
 
       ctx.replyWithPhoto(picPorn);
     } catch (error) {
@@ -49,7 +49,7 @@ PornBot.command(
     );
 
     try {
-      const picPorn = await getPic();
+      const picPorn = await getPic(ctx.message.text.replace("/", ""));
 
       ctx.replyWithVideo(picPorn);
     } catch (error) {
