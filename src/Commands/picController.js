@@ -26,34 +26,14 @@ const asianPicPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
   // Call redditApi en collect the imgs
-  const dataImages = await sort(randomReddit, "pic");
+  try {
+    const dataImages = await sort(randomReddit, "pic");
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  //Select a random img from array
-  return dataImages[randomNumber].link;
-};
-
-const asianGifPorn = async () => {
-  const subReddits = [
-    "AsiansGoneWild",
-    "juicyasians",
-    "AsianPorn",
-    "AsianHotties",
-    "NSFW_Japan"
-  ];
-
-  const randomReddit =
-    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
-
-  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
-  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
-
-  const dataImages = await sort(randomReddit, "gif");
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
-
-  //Select a random img from array
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const assPicPorn = async () => {
@@ -72,12 +52,14 @@ const assPicPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  const dataImages = await sort(randomReddit, "pic");
+  try {
+    const dataImages = await sort(randomReddit, "pic");
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  //Select a random img from array
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const analPicPorn = async () => {
@@ -94,10 +76,14 @@ const analPicPorn = async () => {
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
-  const dataImages = await sort(randomReddit, "pic");
+  try {
+    const dataImages = await sort(randomReddit, "pic");
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
-  return dataImages[randomNumber].link;
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const hairyPussyPicPorn = async () => {
@@ -107,13 +93,14 @@ const hairyPussyPicPorn = async () => {
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+  try {
+    const dataImages = await sort(randomReddit, "pic");
 
-  const dataImages = await sort(randomReddit, "pic");
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
-
-  //Select a random img from array
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const amateurPicPorn = async () => {
@@ -131,11 +118,14 @@ const amateurPicPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  const dataImages = await sort(randomReddit, "pic");
+  try {
+    const dataImages = await sort(randomReddit, "pic");
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 //College
@@ -155,11 +145,14 @@ const collegePicPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  const dataImages = await sort(randomReddit, "pic");
+  try {
+    const dataImages = await sort(randomReddit, "pic");
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const trapsPicPorn = async () => {
@@ -187,11 +180,14 @@ const trapsPicPorn = async () => {
 
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  const dataImages = await sort(randomReddit, "pic");
+  try {
+    const dataImages = await sort(randomReddit, "pic");
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 module.exports = {

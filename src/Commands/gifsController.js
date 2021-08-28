@@ -26,11 +26,13 @@ const asianGifPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  const dataImages = await sort(randomReddit, "gif");
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
+  try {
+    const dataImages = await sort(randomReddit, "gif");
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  //Select a random img from array
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const assGifPorn = async () => {
@@ -47,10 +49,13 @@ const assGifPorn = async () => {
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
-  const dataImages = await sort(randomReddit, "gif");
+  try {
+    const dataImages = await sort(randomReddit, "gif");
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const analGifPorn = async () => {
@@ -67,10 +72,13 @@ const analGifPorn = async () => {
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
-  const dataImages = await sort(randomReddit, "gif");
+  try {
+    const dataImages = await sort(randomReddit, "gif");
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const hairyPussyGifPorn = async () => {
@@ -81,12 +89,13 @@ const hairyPussyGifPorn = async () => {
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
-  const dataImages = await sort(randomReddit, "gif");
+  try {
+    const dataImages = await sort(randomReddit, "gif");
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
-
-  //Select a random img from array
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const amateurGifPorn = async () => {
@@ -103,12 +112,13 @@ const amateurGifPorn = async () => {
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+  try {
+    const dataImages = await sort(randomReddit, "gif");
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  const dataImages = await sort(randomReddit, "gif");
-
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
-
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 //College
@@ -127,12 +137,13 @@ const collegeGifPorn = async () => {
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+  try {
+    const dataImages = await sort(randomReddit, "gif");
+    const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-  const dataImages = await sort(randomReddit, "gif");
-
-  const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
-
-  return dataImages[randomNumber].link;
+    //Select a random img from array
+    return dataImages[randomNumber].link;
+  } catch (error) {}
 };
 
 const trapsGifPorn = async () => {
