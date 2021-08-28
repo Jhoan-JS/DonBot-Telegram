@@ -5,10 +5,10 @@ const helpers = require("../helpers/help");
 const snoowrap = require("snoowrap");
 
 const r = new snoowrap({
-  userAgent: "DonBot",
-  clientId: "6iRNBv1tqxrCZA",
-  clientSecret: "M7UM2siJ0DpyzdO8D9iDVpsrGhLtHA",
-  refreshToken: "948423918612-2gb6nqUlKGJjxXFsv3-fngIarqQ3sw"
+  userAgent: process.env.USER_AGENT,
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+  refreshToken: process.env.REFRESH_TOKEN
 });
 const asianPicPorn = async () => {
   // let dataPost = [];
