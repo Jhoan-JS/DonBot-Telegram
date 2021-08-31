@@ -30,7 +30,7 @@ const getDataGif = async (data) => {
     if (img.url.includes(".gif") || img.url.includes(".mp4")) {
       //Replace gifv to mp4
       img.url = img.url.replace(".gifv", ".mp4");
-
+      console.log(img.url);
       images.push({
         link: img.url,
         score: img.score

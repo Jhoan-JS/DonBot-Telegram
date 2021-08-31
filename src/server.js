@@ -14,7 +14,19 @@ PornBot.help((ctx) => {
 
 //Pics
 PornBot.command(
-  ["asian", "ass", "anal", "amateur", "hairypussy", "college", "trap"],
+  [
+    "asian",
+    "ass",
+    "anal",
+    "amateur",
+    "hairypussy",
+    "college",
+    "trap",
+    "bisexual",
+    "petite",
+    "cute",
+    "panties"
+  ],
   async (ctx) => {
     const getPic = await listOfFuctions.getFuctionPic(
       ctx.message.text.replace("/", "")
@@ -24,11 +36,7 @@ PornBot.command(
       const picPorn = await getPic(ctx.message.text.replace("/", ""));
 
       ctx.replyWithPhoto(picPorn);
-    } catch (error) {
-      const picPorn = await getPic();
-
-      ctx.replyWithPhoto(picPorn);
-    }
+    } catch (error) {}
   }
 );
 
@@ -41,7 +49,11 @@ PornBot.command(
     "amateurgif",
     "hairypussygif",
     "collegegif",
-    "trapgif"
+    "trapgif",
+    "bisexualgif",
+    "petitegif",
+    "cutegif",
+    "pantiesgif"
   ],
   async (ctx) => {
     const getPic = await listOfFuctions.getFuctionGif(
@@ -52,11 +64,7 @@ PornBot.command(
       const picPorn = await getPic(ctx.message.text.replace("/", ""));
 
       ctx.replyWithVideo(picPorn);
-    } catch (error) {
-      const picPorn = await getPic();
-
-      ctx.replyWithVideo(picPorn);
-    }
+    } catch (error) {}
   }
 );
 

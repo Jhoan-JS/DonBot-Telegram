@@ -9,7 +9,11 @@ const getFuctionPic = (userCommand) => {
     amateur: picController.amateurPicPorn,
     hairypussy: picController.hairyPussyPicPorn,
     college: picController.collegePicPorn,
-    trap: picController.trapsPicPorn
+    trap: picController.trapsPicPorn,
+    bisexual: picController.bisexualPicPorn,
+    cute: picController.cutePicPorn,
+    petite: picController.petitePicPorn,
+    panties: picController.pantiesPicPorn
   };
   let FuctionPic = "";
   for (const fuction in listFuctionsPic) {
@@ -30,7 +34,11 @@ const getFuctionGif = (userCommand) => {
 
     hairypussygif: gifsController.hairyPussyGifPorn,
     collegegif: gifsController.collegeGifPorn,
-    trapgif: gifsController.trapsGifPorn
+    trapgif: gifsController.trapsGifPorn,
+    bisexualgif: gifsController.bisexualGifPorn,
+    cutegif: gifsController.cuteGifPorn,
+    petitegif: gifsController.petiteGifPorn,
+    pantiesgif: gifsController.pantiesGifPorn
   };
 
   let FuctionPic = "";
