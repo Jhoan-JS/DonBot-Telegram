@@ -38,7 +38,8 @@ const getDataGif = async (data) => {
     }
   });
 
-  // console.log(images);
+
+  console.log(images);
   return images;
 };
 
@@ -72,6 +73,7 @@ const getNew = async (randomReddit, type) => {
     })
     .then((data) => {
       if (type == "pic") {
+    
         return getDataPic(data);
       } else {
         return getDataGif(data);
