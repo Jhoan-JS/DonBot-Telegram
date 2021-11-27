@@ -12,20 +12,20 @@ const r = new snoowrap({
   refreshToken: process.env.REFRESH_TOKEN,
 });
 
-if (process.env.NODE_ENV === "production") {
-  const getRedGifsNormalData = async () => {
-    let veces = 0;
-    console.log(veces);
-    try {
-      const data = await redgifsAPI.getRedGifsNormalData();
+// if (process.env.NODE_ENV === "production") {
+//   const getRedGifsNormalData = async () => {
+//     let veces = 0;
+//     console.log(veces);
+//     try {
+//       const data = await redgifsAPI.getRedGifsNormalData();
 
-      redGifsNormalData = data;
-    } catch (error) {}
+//       redGifsNormalData = data;
+//     } catch (error) {}
 
-    veces++;
-  };
-  getRedGifsNormalData();
-}
+//     veces++;
+//   };
+//   getRedGifsNormalData();
+// }
 
 const asianGifPorn = async () => {
   const subReddits = [
