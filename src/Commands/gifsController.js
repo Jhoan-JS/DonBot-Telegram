@@ -192,7 +192,7 @@ const trapsGifPorn = async () => {
 
   const randomReddit =
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
-  console.log(randomReddit);
+
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
@@ -220,7 +220,7 @@ const bisexualGifPorn = async () => {
 
   const randomReddit =
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
-  console.log(randomReddit);
+
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
@@ -246,7 +246,7 @@ const pantiesGifPorn = async () => {
 
   const randomReddit =
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
-  console.log(randomReddit);
+
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
@@ -275,7 +275,7 @@ const petiteGifPorn = async () => {
 
   const randomReddit =
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
-  console.log(randomReddit);
+
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
@@ -300,7 +300,7 @@ const cuteGifPorn = async () => {
 
   const randomReddit =
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
-  console.log(randomReddit);
+
   const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
   const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
 
