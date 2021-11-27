@@ -25,7 +25,7 @@ PornBot.command(
     "bisexual",
     "petite",
     "cute",
-    "panties"
+    "panties",
   ],
   async (ctx) => {
     const getPic = await listOfFuctions.getFuctionPic(
@@ -53,7 +53,7 @@ PornBot.command(
     "bisexualgif",
     "petitegif",
     "cutegif",
-    "pantiesgif"
+    "pantiesgif",
   ],
   async (ctx) => {
     const getPic = await listOfFuctions.getFuctionGif(

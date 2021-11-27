@@ -6,18 +6,14 @@ const r = new snoowrap({
   userAgent: "DonBot",
   clientId: "6iRNBv1tqxrCZA",
   clientSecret: "M7UM2siJ0DpyzdO8D9iDVpsrGhLtHA",
-  refreshToken: "948423918612-2gb6nqUlKGJjxXFsv3-fngIarqQ3sw"
+  refreshToken: "948423918612-2gb6nqUlKGJjxXFsv3-fngIarqQ3sw",
 });
 
 const getDataPic = (data) => {
   const images = [];
   data.forEach((img) => {
     if (img.url.includes("png") || img.url.includes("jpg")) {
-      images.push({
-        link: img.url,
-
-        score: img.score
-      });
+      images.push(img.url);
     }
   });
 
@@ -30,16 +26,11 @@ const getDataGif = async (data) => {
     if (img.url.includes(".gif") || img.url.includes(".mp4")) {
       //Replace gifv to mp4
       img.url = img.url.replace(".gifv", ".mp4");
-      console.log(img.url);
-      images.push({
-        link: img.url,
-        score: img.score
-      });
+
+      images.push(img.url);
     }
   });
 
-
-  console.log(images);
   return images;
 };
 
@@ -69,11 +60,10 @@ const getNew = async (randomReddit, type) => {
     .getNew({
       time: "all",
       limit: 600,
-      search: "gif"
+      search: "gif",
     })
     .then((data) => {
       if (type == "pic") {
-    
         return getDataPic(data);
       } else {
         return getDataGif(data);
@@ -89,7 +79,7 @@ const getTop = async (randomReddit, type) => {
     .getTop({
       time: "all",
       limit: 400,
-      search: "gif"
+      search: "gif",
     })
     .then((data) => {
       if (type == "pic") {
@@ -109,7 +99,7 @@ const getHot = async (randomReddit, type) => {
     .getHot({
       time: "all",
       limit: 400,
-      search: "gif"
+      search: "gif",
     })
     .then((data) => {
       if (type == "pic") {
@@ -144,5 +134,5 @@ module.exports = {
 
   getNew,
   getTop,
-  getHot
+  getHot,
 };

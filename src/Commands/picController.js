@@ -8,7 +8,7 @@ const r = new snoowrap({
   userAgent: process.env.USER_AGENT,
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  refreshToken: process.env.REFRESH_TOKEN
+  refreshToken: process.env.REFRESH_TOKEN,
 });
 const asianPicPorn = async () => {
   // let dataPost = [];
@@ -18,7 +18,7 @@ const asianPicPorn = async () => {
     "juicyasians",
     "AsianPorn",
     "AsianHotties",
-    "NSFW_Japan"
+    "NSFW_Japan",
   ];
 
   const randomReddit =
@@ -32,7 +32,7 @@ const asianPicPorn = async () => {
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
     //Select a random img from array
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -43,7 +43,7 @@ const assPicPorn = async () => {
     "bigasses",
     "booty",
     "pawg",
-    "cosplaybutts"
+    "cosplaybutts",
   ];
 
   const randomReddit =
@@ -58,7 +58,7 @@ const assPicPorn = async () => {
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
     //Select a random img from array
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -70,7 +70,7 @@ const analPicPorn = async () => {
     "MasterOfAnal",
     "painal",
     "anal_gifs",
-    "buttsthatgrip"
+    "buttsthatgrip",
   ];
   const randomReddit =
     subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
@@ -82,7 +82,7 @@ const analPicPorn = async () => {
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
     //Select a random img from array
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -99,7 +99,7 @@ const hairyPussyPicPorn = async () => {
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
     //Select a random img from array
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -110,7 +110,7 @@ const amateurPicPorn = async () => {
     "amateurcumsluts",
     "AmateurPorn",
     "realasians",
-    "FunWithFriends"
+    "FunWithFriends",
   ];
 
   const randomReddit =
@@ -124,7 +124,7 @@ const amateurPicPorn = async () => {
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
     //Select a random img from array
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -137,7 +137,7 @@ const collegePicPorn = async () => {
     "CollegeInitiation",
     "bestofcollege",
     "LegalCollegeGirls",
-    "fuckyeahcollegesluts"
+    "fuckyeahcollegesluts",
   ];
 
   const randomReddit =
@@ -151,7 +151,7 @@ const collegePicPorn = async () => {
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
     //Select a random img from array
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -180,7 +180,7 @@ const trapsPicPorn = async () => {
     "Tgifs",
     "bigdickgirl",
     "DeliciousTraps",
-    "HungTraps"
+    "HungTraps",
   ];
 
   const randomReddit =
@@ -196,7 +196,7 @@ const trapsPicPorn = async () => {
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
     //Select a random img from array
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -208,7 +208,7 @@ const bisexualPicPorn = async () => {
     "heteroflexible",
     "fucklicking",
     "bicuckold",
-    "suckingtogether"
+    "suckingtogether",
   ];
 
   const randomReddit =
@@ -222,7 +222,7 @@ const bisexualPicPorn = async () => {
 
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 const pantiesPicPorn = async () => {
@@ -234,7 +234,7 @@ const pantiesPicPorn = async () => {
     "anklepanties",
     "ToplessInPanties",
     "undies",
-    "sheerpanties"
+    "sheerpanties",
   ];
 
   const randomReddit =
@@ -248,7 +248,7 @@ const pantiesPicPorn = async () => {
 
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -263,7 +263,7 @@ const petitePicPorn = async () => {
     "skinnytail",
     "SexiestPetites",
     "PetiteGirls",
-    "Waif"
+    "Waif",
   ];
 
   const randomReddit =
@@ -277,7 +277,7 @@ const petitePicPorn = async () => {
 
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -288,7 +288,7 @@ const cutePicPorn = async () => {
     "CuteModeSlutMode",
     "smilers",
     "sillygirls",
-    "NSFWsmiles"
+    "NSFWsmiles",
   ];
 
   const randomReddit =
@@ -302,7 +302,7 @@ const cutePicPorn = async () => {
 
     const randomNumber = helpers.generateRandomNumber(dataImages.length - 1);
 
-    return dataImages[randomNumber].link;
+    return dataImages[randomNumber];
   } catch (error) {}
 };
 
@@ -323,5 +323,5 @@ module.exports = {
   bisexualPicPorn,
   pantiesPicPorn,
   cutePicPorn,
-  petitePicPorn
+  petitePicPorn,
 };
