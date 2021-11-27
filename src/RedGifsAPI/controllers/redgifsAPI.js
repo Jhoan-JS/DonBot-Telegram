@@ -5,9 +5,8 @@ const helpers = require("../helpers/helper");
 
 exports.getRedGifsNormalData = async () => {
   try {
-    console.log("yes");
     const request = await axios.get(
-      "https://api.redgifs.com/v2/gifs/search?search_text=Trans,&count=300"
+      `https://api.redgifs.com/v2/gifs/search?search_text=Trans,&count=400`
     );
 
     const data = await helpers.getGif(request.data.gifs);
