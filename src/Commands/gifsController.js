@@ -200,7 +200,7 @@ const trapsGifPorn = async () => {
     const data = await sort(randomReddit, "gif");
 
     const gifs = data.concat(redGifsNormalData);
-    console.log(gifs);
+
     const randomNumber = helpers.generateRandomNumber(gifs.length - 1);
 
     return gifs[randomNumber];
