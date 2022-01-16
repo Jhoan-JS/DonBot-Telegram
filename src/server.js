@@ -9,7 +9,9 @@ const PornBot = new Telegraf(process.env.TOKEN);
 
 //Commands
 PornBot.help((ctx) => {
-  ctx.reply("Help");
+  ctx.reply(
+    "NSFW Pics\n /asian - Cute asian girl pic \n/ass - Ass pic \n/anal - Anal pic \n/hairypussy - Unshaven pussy(weird shit) \n/college - Cute college girl(not illegaly) \n/femboy - The best thing in the life(You know it) \n/petite - Cute small girl(not illegaly bro) \n/cute - gorgeous girls \n/panties - PANTIES(If you are into this shit) \n\nNSFW Gifs\n /asiangif - Cute asian girl gif \n/assgif - ass gif \n/analgif - anal gif \n/hairypussygif - unshaven pussy(weird shit) \n/collegegif - cute college girl(not illegaly) \n/femboygif - The best thing in the life(You know it) \n/petitegif - cute small girl(not illegaly bro) \n/cutegif - gorgeous girls \n/pantiesgif - PANTIES(If you are into this shit) "
+  );
 });
 
 //Pics
@@ -26,6 +28,8 @@ PornBot.command(
     "petite",
     "cute",
     "panties",
+    ,
+    "femboy",
   ],
   async (ctx) => {
     const getPic = await listOfFuctions.getFuctionPic(
@@ -54,6 +58,7 @@ PornBot.command(
     "petitegif",
     "cutegif",
     "pantiesgif",
+    "femboygif",
   ],
   async (ctx) => {
     const getPic = await listOfFuctions.getFuctionGif(

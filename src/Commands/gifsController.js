@@ -162,11 +162,29 @@ const collegeGifPorn = async () => {
   } catch (error) {}
 };
 
+const femboyGifPorn = async () => {
+  const subReddits = ["traps", "FemBoys", "traphentai", "DeliciousTraps"];
+
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+
+  try {
+    const data = await sort(randomReddit, "gif");
+    console.log(data);
+    const randomNumber = helpers.generateRandomNumber(data.length - 1);
+
+    return data[randomNumber];
+  } catch (error) {}
+};
+
 const trapsGifPorn = async () => {
   const subReddits = [
     "traps",
     "Sissies",
-
+    "boypussy",
     "FemBoys",
     "Tgirls",
     "GoneWildCD",
@@ -198,8 +216,6 @@ const trapsGifPorn = async () => {
 
   try {
     const data = await sort(randomReddit, "gif");
-
-    const gifs = data.concat(redGifsNormalData);
 
     const randomNumber = helpers.generateRandomNumber(gifs.length - 1);
 
@@ -324,7 +340,7 @@ module.exports = {
   collegeGifPorn,
 
   hairyPussyGifPorn,
-
+  femboyGifPorn,
   trapsGifPorn,
   bisexualGifPorn,
   pantiesGifPorn,

@@ -13,7 +13,8 @@ const getFuctionPic = (userCommand) => {
     bisexual: picController.bisexualPicPorn,
     cute: picController.cutePicPorn,
     petite: picController.petitePicPorn,
-    panties: picController.pantiesPicPorn
+    panties: picController.pantiesPicPorn,
+    femboy: picController.femboyPicPorn,
   };
   let FuctionPic = "";
   for (const fuction in listFuctionsPic) {
@@ -31,14 +32,14 @@ const getFuctionGif = (userCommand) => {
     asiangif: gifsController.asianGifPorn,
     assgif: gifsController.assGifPorn,
     analgif: gifsController.analGifPorn,
-
+    femboygif: gifsController.femboyGifPorn,
     hairypussygif: gifsController.hairyPussyGifPorn,
     collegegif: gifsController.collegeGifPorn,
     trapgif: gifsController.trapsGifPorn,
     bisexualgif: gifsController.bisexualGifPorn,
     cutegif: gifsController.cuteGifPorn,
     petitegif: gifsController.petiteGifPorn,
-    pantiesgif: gifsController.pantiesGifPorn
+    pantiesgif: gifsController.pantiesGifPorn,
   };
 
   let FuctionPic = "";
@@ -53,5 +54,5 @@ const getFuctionGif = (userCommand) => {
 
 module.exports = {
   getFuctionPic,
-  getFuctionGif
+  getFuctionGif,
 };

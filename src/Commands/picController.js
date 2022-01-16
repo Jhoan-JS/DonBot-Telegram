@@ -155,6 +155,24 @@ const collegePicPorn = async () => {
   } catch (error) {}
 };
 
+const femboyPicPorn = async () => {
+  const subReddits = ["traps", "FemBoys", "traphentai", "DeliciousTraps"];
+
+  const randomReddit =
+    subReddits[helpers.generateRandomNumber(subReddits.length - 1)];
+
+  const getSort = [helpers.getNew, helpers.getTop, helpers.getHot];
+  const sort = getSort[helpers.generateRandomNumber(getSort.length - 1)];
+
+  try {
+    const data = await sort(randomReddit, "pic");
+
+    const randomNumber = helpers.generateRandomNumber(data.length - 1);
+
+    return data[randomNumber];
+  } catch (error) {}
+};
+
 const trapsPicPorn = async () => {
   const subReddits = [
     "traps",
@@ -318,7 +336,7 @@ module.exports = {
   collegePicPorn,
 
   hairyPussyPicPorn,
-
+  femboyPicPorn,
   trapsPicPorn,
   bisexualPicPorn,
   pantiesPicPorn,
