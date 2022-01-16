@@ -173,7 +173,7 @@ const femboyGifPorn = async () => {
 
   try {
     const data = await sort(randomReddit, "gif");
-    console.log(data);
+
     const randomNumber = helpers.generateRandomNumber(data.length - 1);
 
     return data[randomNumber];
