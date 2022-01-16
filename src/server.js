@@ -7,6 +7,12 @@ const listOfFuctions = require("./helpers/list");
 console.log(process.env.TOKEN);
 const PornBot = new Telegraf(process.env.TOKEN);
 
+PornBot.start((ctx) => {
+  ctx.reply(
+    "Hi, I'm your porn bot. Type /help to see all my commands and get satisfactory experience"
+  );
+});
+
 //Commands
 PornBot.help((ctx) => {
   ctx.reply(
