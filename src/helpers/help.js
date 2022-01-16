@@ -59,7 +59,7 @@ const getNew = async (randomReddit, type) => {
     .getSubreddit(randomReddit)
     .getNew({
       time: "all",
-      limit: 15,
+      limit: 500,
       search: "gif",
     })
     .then((data) => {
@@ -78,7 +78,7 @@ const getTop = async (randomReddit, type) => {
     .getSubreddit(randomReddit)
     .getTop({
       time: "all",
-      limit: 15,
+      limit: 500,
       search: "gif",
     })
     .then((data) => {
@@ -98,7 +98,7 @@ const getHot = async (randomReddit, type) => {
     .getSubreddit(randomReddit)
     .getHot({
       time: "all",
-      limit: 15,
+      limit: 500,
       search: "gif",
     })
     .then((data) => {
